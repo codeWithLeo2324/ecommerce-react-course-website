@@ -27,9 +27,9 @@ function App() {
       <Route path="/product/:id" element={<ProductDetails/>}/>
       <Route path="/checkout"  element={
         <ProtectedRoute>
-          <Checkout/>
+        <Checkout/>
         </ProtectedRoute>
-      }/>
+         }/>
     </Routes>
     </div>
     </CartProvider>

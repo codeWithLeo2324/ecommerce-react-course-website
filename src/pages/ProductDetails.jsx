@@ -1,10 +1,13 @@
 import { Link, useParams } from "react-router-dom";
-import { products } from "./data/products";
+import { getProducts } from "./data/products";
 import { useCart } from "../context/CartContext";
+
+
 
 export default function ProductDetails() {
   const { id } = useParams();
   const { addToCart } = useCart();
+  const products = getProducts();
 
   const product = products.find((p) => p.id === Number(id));
 
